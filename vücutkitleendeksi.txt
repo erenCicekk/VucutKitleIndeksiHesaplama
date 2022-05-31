@@ -1,0 +1,39 @@
+Console.WriteLine("***** VÜCUT KİTLE ENDEKSİ HESAPLAMA PROGRAMI *****");
+Console.WriteLine();
+for(int i = 0; i < 10; i++) 
+{ 
+    Console.Write("Boyunuzu metre cinsinden giriniz(1,80 virgül ile): ");
+    double boy = Convert.ToDouble(Console.ReadLine());
+
+
+    Console.Write("Kilonuzu giriniz: ");
+    double kilo = Convert.ToDouble(Console.ReadLine());
+
+}
+static double vucutKitleIndeksi(double boy, double kilo)
+{
+    double KitleIndeksi = kilo / (boy * boy);
+    return KitleIndeksi;
+}
+
+Console.WriteLine("_____________________________________________");
+Console.WriteLine();
+
+Console.WriteLine("Vücut kitle indeksiniz: " + vucutKitleIndeksi(boy, kilo));
+
+if( vucutKitleIndeksi(boy, kilo) < 18)
+{
+    Console.WriteLine("ZAYIF");
+}
+else if( vucutKitleIndeksi(boy, kilo) >= 18 && vucutKitleIndeksi(boy, kilo) < 25)
+{
+    Console.WriteLine("İDEAL KİLO");
+}
+else if(vucutKitleIndeksi(boy, kilo) >= 25 && vucutKitleIndeksi(boy, kilo) <30)
+{
+    Console.WriteLine("KİLOLU");
+}
+else if(vucutKitleIndeksi(boy, kilo) >= 30 && vucutKitleIndeksi(boy, kilo) < 35)
+{
+    Console.WriteLine("OBEZ");
+}
